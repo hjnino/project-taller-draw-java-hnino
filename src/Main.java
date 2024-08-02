@@ -7,56 +7,50 @@ public class Main {
         int a = scanner.nextInt();
         System.out.println("Ingrese un segundo numero:");
         int b = scanner.nextInt();
+        System.out.println("Ingrese un tercer numero:");
+        int c = scanner.nextInt();
 
         if (a == b) {
             System.out.println("Los números son iguales");
-            return;
-        } else {
-            System.out.println("Ingrese un tercer numero:");
-        }
-        int c = scanner.nextInt();
-
-        if (c == a) {
+        } else if (a == c) {
             System.out.println("Los números son iguales");
-            return;
-        } else if (c == b) {
+        } else if (b == c) {
             System.out.println("Los números son iguales");
-            return;
-        }
+        }else {
+            if (a > b) {
+                if (a > c) {
+                    System.out.println("El numero mayor es:" + a);
+                    if (b>c){
+                        System.out.println("El numero menor es:" + c);
+                    }else {
+                        System.out.println("El numero menor es:" + b);
+                    }
 
-        if (a > b) {
-            if (a > c) {
-                System.out.println("El numero mayor es:" + a);
-                if (b>c){
-                    System.out.println("El numero menor es:" + c);
-                }else {
-                    System.out.println("El numero menor es:" + b);
+                } else {
+                    System.out.println("El numero mayor es:" + c);
+                    if(a>b) {
+                        System.out.println("El numero menor es:" + b);
+                    }else{
+                        System.out.println("El numero menor es:" + a);
+                    }
                 }
 
             } else {
-                System.out.println("El numero mayor es:" + c);
-                if(a>b) {
-                    System.out.println("El numero menor es:" + b);
-                }else{
-                    System.out.println("El numero menor es:" + a);
-                }
-            }
+                if (b>c) {
+                    System.out.println("El numero mayor es:" + b);
+                    if(a>c){
+                        System.out.println("El numero menor es:" + c);
+                    }else{
+                        System.out.println("El numero menor es:" + a);
+                    }
 
-        } else {
-            if (b>c) {
-                System.out.println("El numero mayor es:" + b);
-                if(a>c){
-                    System.out.println("El numero menor es:" + c);
-                }else{
-                    System.out.println("El numero menor es:" + a);
-                }
-
-            } else {
-                System.out.println("El numero mayor es:" + c);
-                if(a>b){
-                    System.out.println("El numero menor es:" + b);
-                }else{
-                    System.out.println("El numero menor es:" + a);
+                } else {
+                    System.out.println("El numero mayor es:" + c);
+                    if(a>b){
+                        System.out.println("El numero menor es:" + b);
+                    }else{
+                        System.out.println("El numero menor es:" + a);
+                    }
                 }
             }
         }
